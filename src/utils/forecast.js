@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if ((body.location.latitude === 0) && (body.location.longitude === 0)) {
             callback('Coordinate error', undefined)
         } else {
-            callback(undefined, (body.current.weather_descriptions[0] + '. It is currenly ' + body.current.temperature + ` degrees out. And there is a ` + body.current.feelslike + ` percent chance of raining`));
+            callback(undefined, (body.current.weather_descriptions[0] + '. It is currenly ' + body.current.temperature + ` degrees out. And there is a ` + body.current.feelslike + ` percent chance of raining. And the humidity is ` + body.current.humidity + `.`));
         }
     })
 
